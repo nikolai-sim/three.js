@@ -11,7 +11,7 @@ export default /* glsl */`
       fogDepth *= mix(noiseSample, 1.0, saturate((fogDepth - 5000.0) / 5000.0));
       fogDepth *= fogDepth;
 
-      float heightFactor = 0.05;
+      float heightFactor = 0.00000000001;
       float fogFactor = heightFactor * exp(-fogOrigin.y * fogDensity) * (
           1.0 - exp(-fogDepth * fogDirection.y * fogDensity)) / fogDirection.y;
       fogFactor = saturate(fogFactor);
