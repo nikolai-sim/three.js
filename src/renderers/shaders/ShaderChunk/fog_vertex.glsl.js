@@ -1,7 +1,5 @@
 export default /* glsl */`
-#ifdef USE_FOG
-
-	vFogDepth = - mvPosition.z;
-
-#endif
+ #ifdef USE_FOG
+      vWorldPosition = worldPosition.xyz;
+    #endif
 `;
